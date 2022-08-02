@@ -1,0 +1,139 @@
+.ListaConvite {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px 50px;
+    align-items: center;
+    
+  }
+  
+  
+  @media (max-width: 1220px) {
+    .ListaConvite {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 840px) {
+    .ListaConvite {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .ListaConviteitem {
+    display: flex;
+    font-family: "Exo";
+    background: rgba(112, 133, 112, 0.973);
+    border-radius: 10px;
+    padding: 2px;
+    width: 275px;
+    
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+     
+  }
+  
+  
+  @media (max-width: 400px) {
+    .ListaConviteitem {
+      width: 210px;
+      height: 180px;
+    }
+  }
+  
+  .ListaConviteitem > div {
+   
+    justify-content: space-between;
+    flex-direction: column; 
+    
+  }
+  
+  .ListaConviteitem__titulo{
+    display: flex;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 100%;
+    color: blue;
+    margin-left: 1rem;
+  }
+  
+  .ListaConviteitem__descricao {
+    font-size: 1rem;
+    font-weight: 700;
+   color: black;
+   margin-top: 0.1rem;
+   margin-left: 1rem;
+  
+  }
+  
+  .ListaConviteitem__foto {
+    display: flex;
+    height: 110px;
+    margin: 1rem 1rem 1rem 0rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    
+  
+  }
+  
+  .ListaConviteitem__preco {
+    color: blue;
+    font-weight: 700;
+    margin-top: 0.1rem;
+    margin-left: 1rem;
+   
+  }
+  
+  .Acoes {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .Acoes__adicionar,
+  .Acoes__remover {
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-family: "Exo", sans-serif;
+    padding: 6px;
+    max-width: 100px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 48%;
+  }
+  
+  .Acoes__remover {
+    background-color: red;
+  }
+  
+  .Acoes__adicionar {
+    background-color: darkviolet;
+    align-items: center;
+    color: black;
+    margin-left: 1rem;
+    margin-block-end: 0.5rem;
+  }
+  
+  .Acoes__adicionar--preencher {
+    width: 100%;
+  }
+  /* ... */
+  .ListaConviteitem__numero{
+  background-color: rgb(199, 199, 228);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  color: black;
+  font-size: .8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: -9px;
+  left: -9px;
+}
+/* ... */
