@@ -2,7 +2,7 @@ import "./Navbar.css";
 
 import sacola from "assets/icons/sacola.svg";
 import icone from "assets/icons/icone.png";
-import logo from "assets/logo.jpg";
+import logo from "assets/logo/logo.jpg";
 
 function Navbar({createConvite}){
     return (

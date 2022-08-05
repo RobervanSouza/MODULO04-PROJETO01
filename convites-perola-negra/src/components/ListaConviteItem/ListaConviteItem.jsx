@@ -1,7 +1,13 @@
 import "./ListaConviteItem.css";
 
-function ListaConviteItem({convite, quantidadeSelecionada, index, onRemove, onAdd, clickItem}) {
- 
+function ListaConviteItem({
+  convite,
+  quantidadeSelecionada,
+  index,
+  onRemove,
+  onAdd,
+  clickItem,
+}) {
   const adicionaItem = (conRender, index) =>
     Boolean(conRender) && (
       <span className="ListaConviteitem__numero">
@@ -11,14 +17,19 @@ function ListaConviteItem({convite, quantidadeSelecionada, index, onRemove, onAd
 
   const removeButton = (conRender, index) =>
     Boolean(conRender) && (
-      <button className="Acoes__remover" onClick={(e) => {e.stopPropagation(); onRemove(index);}}>
-        
+      <button
+        className="Acoes__remover"
+        onClick={(e) => {
+          e.stopPropagation();
+          onRemove(index);
+        }}
+      >
         Remover
       </button>
     );
 
   return (
-    <div className="ListaConviteitem" onClick={ () => clickItem(convite.id)}>
+    <div className="ListaConviteitem" onClick={() => clickItem(convite.id)}>
       {adicionaItem(quantidadeSelecionada[index], index)}
       <div>
         <div className="ListaConviteitem__titulo">{convite.titulo}</div>
@@ -34,9 +45,12 @@ function ListaConviteItem({convite, quantidadeSelecionada, index, onRemove, onAd
         <div className="ListaConviteitem__acao Acoes">
           <button
             className={`Acoes__adicionar ${
-                quantidadeSelecionada[index] && "Acoes__adicionar--preecher"
+              quantidadeSelecionada[index] && "Acoes__adicionar--preecher"
             }`}
-            onClick={(e) => { e.stopPropagation(); onAdd (index);}}
+            onClick={(e) => {
+              e.stopPropagation();
+              onAdd(index);
+            }}
           >
             Adicionar
           </button>
@@ -47,4 +61,3 @@ function ListaConviteItem({convite, quantidadeSelecionada, index, onRemove, onAd
   );
 }
 export default ListaConviteItem;
-
