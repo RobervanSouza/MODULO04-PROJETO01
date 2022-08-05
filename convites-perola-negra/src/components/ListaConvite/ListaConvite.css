@@ -1,0 +1,21 @@
+.ListaConvite {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px 50px;
+    align-items: center;
+    
+  }
+  
+  
+  @media (max-width: 1220px) {
+    .ListaConvite {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 840px) {
+    .ListaConvite {
+      grid-template-columns: 1fr;
+    }
+  }
+  
