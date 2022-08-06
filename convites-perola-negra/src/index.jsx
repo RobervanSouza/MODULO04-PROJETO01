@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Home from "./veiws/Home/Home";
-import 'assets/styles/main.css';
+import "assets/styles/main.css";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -9,4 +9,3 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
