@@ -5,7 +5,7 @@ export const convites = [
       "Quam vulputate dignissim suspendisse in est ante in nibh mauris.",
     foto: require("../assets/images/convite 2.jpg"),
     preco: 3.0,
-    marca: "Perola Negra Convites",
+   
   },
   {
     titulo: "convite para festa",

@@ -1,42 +1,46 @@
 
 .Header-header {
     max-width: 1110px;
-    margin: 0 auto 25px auto;
+    margin: 0 auto 55px auto;
     position: relative;
+    
+    align-items: center;
   }
   
   .row {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin: 20px 0 35px 0;
+    margin: 20px 0 5px 0;
+    
   }
   
   .header-logo {
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    
     background-color: rgb(209, 187, 187);
-    width: 340px;
-    height: 45px;
+    width: 77rem;
+    height: 4rem;
     
   }
   
  .logo-nome {
     position: absolute;
-    left: 55px;
+    left: 2px;
+   
     font-family: "Exo";
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: blue;
     margin-left: 1.5rem;
   }
   
   .logo-icone {
     position: absolute;
-    left: -20px;
-    top: -15px;
-    margin-right: 55rem;
+    left: -69px;
+    top: -3px;
+    margin-right: 25rem;
 
     
   }
@@ -101,7 +105,7 @@
 
   margin-left: 45rem;
   margin-top: 1.4rem;
-
+  
   
 }
 
@@ -127,6 +131,7 @@
   .convite {
     background: none;
     border: none;
+    
   }
 
   

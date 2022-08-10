@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, } from "react";
 import "./AdicionaConvite.css";
 import Modal from "components/Modal/Modal";
 
@@ -11,7 +11,7 @@ function AdicionaConvite({ closeModal }) {
 
   const [state, setState] = useState(form);
   const handleChange = (e, name) => {
-    setState({ ...state, [name]: e.target.valeu });
+    setState({ ...state, [name]: e.target.value });
   };
 
   
