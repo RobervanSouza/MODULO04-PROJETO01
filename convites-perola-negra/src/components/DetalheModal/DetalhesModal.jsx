@@ -6,9 +6,9 @@ function DetalhesModal({ convite, closeModal }) {
     <Modal closeModal={closeModal}>
       <div className="detalhesModal">
         <div>
-          <div className="ConviteDetalhesModal__titulo"> {convite.titulo}</div>
-          <div className="ConviteDetalhesModal__preco"> 
-            {Number(convite.preco).toFixed(2)} 
+          <div className="ConviteDetalhesModal__titulo"> {convite.nome}</div>
+          <div className="ConviteDetalhesModal__preco">Quantidade: 
+              {Number(convite.quantidade)} 
           </div>
           <div className="ConviteDetalhesModal__descricao">
             {" "}

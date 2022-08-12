@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import DetalhesModal from "components/DetalheModal/DetalhesModal";
 import ListaConviteItem from "components/ListaConviteItem/ListaConviteItem";
- /*import {ConviteService} from 'service/ConviteService';*/
+ import {ConviteService} from 'service/ConviteService';
 
-import { convites } from 'mocks/convites.js'
+ /*import { convites } from 'mocks/convites.js'*/
 import "./ListaConvite.css";
 
 function ListaConvite() {
-  /*const [convites, setConvites] = useState([]);*/
+  const [convites, setConvites] = useState([]);
   const [conviteSelecionado, setConviteSelecionado] = useState([]);
   const adicionarItem = (conviteIndex) => {
     const convite = {
@@ -23,17 +23,17 @@ function ListaConvite() {
     setConviteSelecionado({ ...conviteSelecionado, ...convite });
   };
  
-  /*
+  
 const  getLista = async () => {
   const response = await ConviteService.getLista();
-  setConvites(response);
-  console.log(response);
+  setConvites(response.allconvites);
+ 
 
 }
 useEffect(() => {
 getLista();
 }, [])
-*/
+
 console.log(convites);
   return (
     <div className="ListaConvite">

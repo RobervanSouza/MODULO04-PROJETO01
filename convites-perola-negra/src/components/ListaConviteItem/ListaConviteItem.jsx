@@ -32,7 +32,7 @@ function ListaConviteItem({
     <div className="ListaConviteitem" onClick={() => clickItem(convite.id)}>
       {adicionaItem(quantidadeSelecionada[index], index)}
       <div>
-        <div className="ListaConviteitem__titulo">{convite.titulo}</div>
+        <div className="ListaConviteitem__titulo">{convite.nome}</div>
         <img
           className="ListaConviteitem__foto"
           src={convite.foto}
@@ -40,7 +40,7 @@ function ListaConviteItem({
         />
         <div className="ListaConviteitem__descricao">{convite.descricao}</div>
         <div className="ListaConviteitem__preco">
-          {convite.preco.toFixed(2)}
+          {convite.quantidade}
         </div>
         <div className="ListaConviteitem__acao Acoes">
           <button

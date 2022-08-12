@@ -22,13 +22,13 @@ function AdicionaConvite({ closeModal }) {
           <h2> Adiciona Convite</h2>
           <div>
             <label className="AdicionaConvite__text" htmlFor="preco">
-              Preço:
+              Quantidade:
             </label>
             <input
               id="preco"
               type="text"
-              placeholder="Preço do Convite"
-              value={state.preco}
+              placeholder="Quantidade do Convite"
+              value={state.quantidade}
               onChange={(e) => handleChange(e, "preco")}
               required
             ></input>
@@ -57,7 +57,7 @@ function AdicionaConvite({ closeModal }) {
             <input
               className="AdicionaConvite__foto"
               id="foto"
-              type="file"
+              type="text"
               accept="image/png, image/jpeg, image/gif"
               value={state.foto}
               onChange={(e) => handleChange(e, "foto")}

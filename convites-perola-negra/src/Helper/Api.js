@@ -1,6 +1,6 @@
 const conviteContext = {
   conviteEndpoint: () => `${Api.baseUrl}/convites`,
-  conviteLista: () => `${conviteContext.conviteEndpoint()}`,
+  conviteLista: () => `${conviteContext.conviteEndpoint()}/all-convites`,
   conviteById: (id) => `${conviteContext.conviteEndpoint()}/one-convite/${id}`,
   createConvite: () => `${conviteContext.conviteEndpoint()}/create-convite`,
   updateConviteById: (id) =>
@@ -10,9 +10,8 @@ const conviteContext = {
 };
 
 export const Api = {
-  
   baseUrl: "http://localhost:3001",
   ...conviteContext,
 };
 
-/* baseUrl: "https://convites-perola.herokuapp.com",*/
+
