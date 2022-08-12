@@ -1,4 +1,4 @@
-import { useState, } from "react";
+import { useState } from "react";
 import "./AdicionaConvite.css";
 import Modal from "components/Modal/Modal";
 
@@ -14,7 +14,6 @@ function AdicionaConvite({ closeModal }) {
     setState({ ...state, [name]: e.target.value });
   };
 
-  
   return (
     <Modal closeModal={closeModal}>
       <div className="AdicionaConvite">
@@ -57,18 +56,14 @@ function AdicionaConvite({ closeModal }) {
             <input
               className="AdicionaConvite__foto"
               id="foto"
-              type="text"
+              type="file"
               accept="image/png, image/jpeg, image/gif"
               value={state.foto}
               onChange={(e) => handleChange(e, "foto")}
               required
             ></input>
           </div>
-          <button
-            type="submitt"
-           
-            className="AdicionaConvite__enviar"
-          >
+          <button type="submitt" className="AdicionaConvite__enviar">
             Enviar
           </button>
         </form>

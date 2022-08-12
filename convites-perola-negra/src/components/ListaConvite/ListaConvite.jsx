@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import DetalhesModal from "components/DetalheModal/DetalhesModal";
 import ListaConviteItem from "components/ListaConviteItem/ListaConviteItem";
- import {ConviteService} from 'service/ConviteService';
+import { ConviteService } from "service/ConviteService";
 
- /*import { convites } from 'mocks/convites.js'*/
+/*import { convites } from 'mocks/convites.js'*/
 import "./ListaConvite.css";
 
 function ListaConvite() {
@@ -22,36 +22,30 @@ function ListaConvite() {
     };
     setConviteSelecionado({ ...conviteSelecionado, ...convite });
   };
- 
-  
-const  getLista = async () => {
-  const response = await ConviteService.getLista();
-  setConvites(response.allconvites);
- 
 
-}
-useEffect(() => {
-getLista();
-}, [])
+  const getLista = async () => {
+    const response = await ConviteService.getLista();
+    setConvites(response.allconvites);
+  };
+  useEffect(() => {
+    getLista();
+  }, []);
 
-console.log(convites);
+  console.log(convites);
   return (
     <div className="ListaConvite">
-       
- 
-       { convites.map((convite, index) => (
-  <ListaConviteItem
-    key={`ListaConviteitem-${index}`}
-    convite={convite}
-    quantidadeSelecionada={conviteSelecionado}
-    index={index}
-    onRemove={(index) => removerItem(index)}
-    onAdd={(index) => adicionarItem(index)}
-    clickItem={(conviteId) => setConviteModal(convite)}
-  />
-)) }
-     
-      
+      {convites.map((convite, index) => (
+        <ListaConviteItem
+          key={`ListaConviteitem-${index}`}
+          convite={convite}
+          quantidadeSelecionada={conviteSelecionado}
+          index={index}
+          onRemove={(index) => removerItem(index)}
+          onAdd={(index) => adicionarItem(index)}
+          clickItem={(conviteId) => setConviteModal(convite)}
+        />
+      ))}
+
       {conviteModal && (
         <DetalhesModal
           convite={conviteModal}

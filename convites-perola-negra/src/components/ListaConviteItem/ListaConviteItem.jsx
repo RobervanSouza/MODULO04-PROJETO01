@@ -35,13 +35,11 @@ function ListaConviteItem({
         <div className="ListaConviteitem__titulo">{convite.nome}</div>
         <img
           className="ListaConviteitem__foto"
-          src={convite.foto}
+          src={convite.imageUrl}
           alt="imagens"
         />
         <div className="ListaConviteitem__descricao">{convite.descricao}</div>
-        <div className="ListaConviteitem__preco">
-          {convite.quantidade}
-        </div>
+        <div className="ListaConviteitem__preco">{convite.quantidade}</div>
         <div className="ListaConviteitem__acao Acoes">
           <button
             className={`Acoes__adicionar ${

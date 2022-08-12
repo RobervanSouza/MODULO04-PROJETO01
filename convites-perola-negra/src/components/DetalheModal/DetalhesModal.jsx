@@ -7,8 +7,9 @@ function DetalhesModal({ convite, closeModal }) {
       <div className="detalhesModal">
         <div>
           <div className="ConviteDetalhesModal__titulo"> {convite.nome}</div>
-          <div className="ConviteDetalhesModal__preco">Quantidade: 
-              {Number(convite.quantidade)} 
+          <div className="ConviteDetalhesModal__preco">
+            Quantidade:
+            {Number(convite.quantidade)}
           </div>
           <div className="ConviteDetalhesModal__descricao">
             {" "}
@@ -16,7 +17,7 @@ function DetalhesModal({ convite, closeModal }) {
           </div>
         </div>
         <img
-          src={convite.foto}
+          src={convite.imageUrl}
           width="300px"
           className="ConviteDetalhesModal__foto"
           alt="foto"

@@ -10,4 +10,3 @@ function Overlay({ children, overlayClick }) {
 }
 
 export default Overlay;
-
